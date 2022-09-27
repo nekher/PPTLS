@@ -37,6 +37,8 @@ var lagarto = 4;
 var spock = 5;
 var eleccion_nomenclada_persona = '';
 var eleccion_nomenclada_npc = '';
+var tot_empates = 0;
+var resultado = '';
 
 function juguemos(){
     eleccion_persona = document.querySelector('#feleccion').value;
@@ -73,72 +75,82 @@ function nomenclar_npc(){
 }
 }
 function definir_ronda(){
+    document.getElementById("feleccion_persona").innerHTML  = eleccion_nomenclada_persona;
+    document.getElementById("feleccion_npc").innerHTML  = eleccion_nomenclada_npc;
+    
+    
     if (eleccion_persona == eleccion_npc){
-        //window.location.replace("empate.html");
-        prompt('Esta ronda, vos elegiste '+ eleccion_nomenclada_persona + ' y la PC eligio Lo mismo..Tremendo y anticlimatico EMPATE... continuemos, recorda, gana el mejor de 5');
-   
+        tot_empates = (tot_empates + 1);
+        resultado = 'ALTO EMPATE!!!!. Va de nuevo!';
+        document.getElementById("fempates").innerHTML  = tot_empates;
+        document.getElementById("fresultado").innerHTML  = resultado;
     } else if (eleccion_persona == 1 && eleccion_npc == 2){
         tot_persona = (tot_persona + 1);
        ronda();
-       prompt('Esta ronda, vos elegiste '+ eleccion_nomenclada_persona + ' y la PC eligio ' + eleccion_nomenclada_npc + ' Ganaste suertudo, continuemos, recorda, gana el mejor de 5');
+       resultado = 'Ganaste suertud@, recorda que igual gana el mejor de 5';
     } else if (eleccion_persona == 1 && eleccion_npc == 4){
         tot_persona = (tot_persona +1);
         ronda();
-        prompt('Esta ronda, vos elegiste '+ eleccion_nomenclada_persona + ' y la PC eligio ' + eleccion_nomenclada_npc + ' Ganaste suertudo, continuemos, recorda, gana el mejor de 5');
+        resultado = 'Ganaste suertud@, recorda que igual gana el mejor de 5';
     } else if (eleccion_persona == 1) {
         tot_npc = (tot_npc + 1);
         ronda();
-        prompt('Esta ronda, vos elegiste '+ eleccion_nomenclada_persona + ' y la PC eligio ' + eleccion_nomenclada_npc + ' Y te toco perder..., recorda, gana el mejor de 5');
+        resultado = 'Y te toco perder..., recorda que igual gana el mejor de 5';
     } else if (eleccion_persona == 2 && eleccion_npc == 3){
         tot_persona = (tot_persona + 1);
         ronda();
-        prompt('Esta ronda, vos elegiste '+ eleccion_nomenclada_persona + ' y la PC eligio ' + eleccion_nomenclada_npc + ' Ganaste suertudo, continuemos, recorda, gana el mejor de 5');
+        resultado = 'Ganaste suertud@, recorda que igual gana el mejor de 5';
     } else if (eleccion_persona == 2 && eleccion_npc == 5){
         tot_persona = (tot_persona + 1);
         ronda();
-        prompt('Esta ronda, vos elegiste '+ eleccion_nomenclada_persona + ' y la PC eligio ' + eleccion_nomenclada_npc + ' Ganaste suertudo, continuemos, recorda, gana el mejor de 5');
+        resultado = 'Ganaste suertud@, recorda que igual gana el mejor de 5';
     } else if (eleccion_persona == 2){
         tot_npc = (tot_npc + 1);
         ronda();       
-        prompt('Esta ronda, vos elegiste '+ eleccion_nomenclada_persona + ' y la PC eligio ' + eleccion_nomenclada_npc + ' Y te toco perder..., recorda, gana el mejor de 5');
+        resultado = 'Y te toco perder..., recorda que igual gana el mejor de 5';
     } else if (eleccion_persona == 3 && eleccion_npc == 1){
         tot_persona = (tot_persona +1);
         ronda();
-        prompt('Esta ronda, vos elegiste '+ eleccion_nomenclada_persona + ' y la PC eligio ' + eleccion_nomenclada_npc + ' Ganaste suertudo, continuemos, recorda, gana el mejor de 5');
+        resultado = 'Ganaste suertud@, recorda que igual gana el mejor de 5';
     } else if (eleccion_persona == 3 && eleccion_npc == 4){
         tot_persona = (tot_persona + 1);
         ronda();
-        prompt('Esta ronda, vos elegiste '+ eleccion_nomenclada_persona + ' y la PC eligio ' + eleccion_nomenclada_npc + ' Ganaste suertudo, continuemos, recorda, gana el mejor de 5');
+        resultado = 'Ganaste suertud@, recorda que igual gana el mejor de 5';
     } else if (eleccion_persona == 3){
         tot_npc = (tot_npc + 1);
         ronda();
-        prompt('Esta ronda, vos elegiste '+ eleccion_nomenclada_persona + ' y la PC eligio ' + eleccion_nomenclada_npc + ' Y te toco perder..., recorda, gana el mejor de 5');
+        resultado = 'Y te toco perder..., recorda que igual gana el mejor de 5';
     } else if (eleccion_persona == 4 && eleccion_npc == 2){
         tot_persona = (tot_persona + 1);
         ronda();
-        prompt('Esta ronda, vos elegiste '+ eleccion_nomenclada_persona + ' y la PC eligio ' + eleccion_nomenclada_npc + ' Ganaste suertudo, continuemos, recorda, gana el mejor de 5');
+        resultado = 'Ganaste suertud@, recorda que igual gana el mejor de 5';
     } else if (eleccion_persona == 4 && eleccion_npc == 5){
         tot_persona = (tot_persona + 1);
         ronda();
-        prompt('Esta ronda, vos elegiste '+ eleccion_nomenclada_persona + ' y la PC eligio ' + eleccion_nomenclada_npc + ' Ganaste suertudo, continuemos, recorda, gana el mejor de 5');
+        resultado = 'Ganaste suertud@, recorda que igual gana el mejor de 5';
     } else if (eleccion_persona == 4){
         tot_npc = (tot_npc + 1);
         ronda();
-        prompt('Esta ronda, vos elegiste '+ eleccion_nomenclada_persona + ' y la PC eligio ' + eleccion_nomenclada_npc + ' Y te toco perder..., recorda, gana el mejor de 5');
+        resultado = 'Y te toco perder..., recorda que igual gana el mejor de 5';
     } else if (eleccion_persona == 5 && eleccion_npc == 1){
         tot_persona = (tot_persona + 1 );
         ronda();
-        prompt('Esta ronda, vos elegiste '+ eleccion_nomenclada_persona + ' y la PC eligio ' + eleccion_nomenclada_npc + ' Ganaste suertudo, continuemos, recorda, gana el mejor de 5');
+        resultado = 'Ganaste suertud@, recorda que igual gana el mejor de 5';
     } else if (eleccion_persona == 5 && eleccion_npc == 3){
         tot_persona = (tot_persona + 1 );
         ronda();
-        prompt('Esta ronda, vos elegiste '+ eleccion_nomenclada_persona + ' y la PC eligio ' + eleccion_nomenclada_npc + ' Ganaste suertudo, continuemos, recorda, gana el mejor de 5');
+        resultado = 'Ganaste suertud@, recorda que igual gana el mejor de 5';
     } else if (eleccion_persona = 5){
         tot_npc = (tot_npc + 1 );
         ronda();
-        prompt('Esta ronda, vos elegiste '+ eleccion_nomenclada_persona + ' y la PC eligio ' + eleccion_nomenclada_npc + ' Y te toco perder..., recorda, gana el mejor de 5');
+        resultado = 'Y te toco perder..., recorda que igual gana el mejor de 5';
     }
+    document.getElementById("puntos_persona").innerHTML  = tot_persona;
+    document.getElementById("puntos_pc").innerHTML  = tot_npc;
+    document.getElementById("fresultado").innerHTML  = resultado;
+
 }
+
 
 function ronda(){
       if (tot_persona == 3){
@@ -148,3 +160,5 @@ function ronda(){
     }
     
 }
+
+      

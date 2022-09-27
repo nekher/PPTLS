@@ -20,8 +20,22 @@
        <option value="4">LAGARTO</option>
        <option value="5">SPOCK</option>
   </select>
+  <input type="button" class="btn btn-info btn-outline-success btn-block" onclick="juguemos()" value="Metele gas!" />
    <br>
-<br>
-<input type="button" class="btn btn-info btn-outline-success btn-block" onclick="juguemos()" value="Metele gas!" />
+   <div class="scoreboard">
+    <h3>Eleccion del Jugador</h3>
+    <div id="feleccion_persona" class="feleccion_persona"></div>
+    <h3>Eleccion de la PC</h3>
+    <div id="feleccion_npc" class="feleccion_npc"></div>
+    <div id = "scores-section">
+    <h2>Puntaje actual:</h2>
+    <span id="puntos_persona">0</span>:<span id="puntos_pc">0</span>
+    <h3>Cantidad de Empates:</h3>
+    <div id="fempates" class="fempates"></div>
+    </div>
+    <h1><div id="fresultado" class="fresultado"></div></h1>
+  </div>
+
+
 </body>
 </html>
